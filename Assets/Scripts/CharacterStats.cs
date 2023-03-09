@@ -22,7 +22,7 @@ public class CharacterStats : MonoBehaviour
     {
         RecruitCharacters();
         Debug.Log(RecruitList[0]);
-        Debug.Log(RecruitList[1]);
+        Debug.Log(RecruitList[1].name);
         Debug.Log(RecruitList[2]);
     }
     
