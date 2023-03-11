@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public enum AnimalType { Cat, Dog, Bird, Mouse };
 
 public class Agent : MonoBehaviour {
+    public string agentName;
     public float distrust;
     public int maxDistrust;
     [Range(0.0f, 100.0f)]
@@ -37,6 +38,10 @@ public class Agent : MonoBehaviour {
     public int ReturnMaxDistrust() {
         return maxDistrust;
     } 
+
+    public string ReturnName() {
+        return agentName;
+    }
 
     public List<string> ReturnEventTypeList() {  //how to do this better?
         if (animalType == AnimalType.Cat) {

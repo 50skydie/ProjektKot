@@ -16,8 +16,4 @@ public class EventHandler : MonoBehaviour {
         Debug.Log("Ni chuja");
         return false;
     }
-
-    public void StartEvent(int initialMapEventTimer, float agentWorkingSpeed) {
-
-    }
 }
