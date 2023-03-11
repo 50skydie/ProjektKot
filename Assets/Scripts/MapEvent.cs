@@ -12,13 +12,16 @@ public class MapEvent : MonoBehaviour {
     public int eventInitialTimer;
     public Image eventImage;
     //public Reward reward - Script that tells other managers what is the reward that depends on reward type?
+    private void Awake()
+    {
+        eventHandler = this.gameObject.GetComponentInParent<EventHandler>();
+    }
 
-    public void RequestEventStart() {
+    public void RequestEventStart() {  //on button click
         eventHandler.CheckEventStartParameters(this.gameObject.GetComponent<MapEvent>());
     }
 
-    public EventType returnEventType() {
-        return eventType;
+    public string returnEventType() {
+        return eventType.ToString();
     }
-
 }
