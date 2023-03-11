@@ -9,8 +9,8 @@ public class AgentHandler : MonoBehaviour {
     public Agent activeAgent;
 
     private void Awake() {
-        foreach (Agent agent in this.gameObject.GetComponentsInChildren<Agent>() ){
-            agentList.Add(agent);
+        foreach (Agent _agent in this.gameObject.GetComponentsInChildren<Agent>() ){
+            agentList.Add(_agent);
         }
     }
 
@@ -22,9 +22,15 @@ public class AgentHandler : MonoBehaviour {
         return (activeAgent);
     }
 
-    private void CheckIfRemoveAgent (Agent _agent) {
-        if(_agent.distrust >= _agent.maxDistrust) {
-            agentList.Remove(_agent);   
+    public void CheckIfRemoveAgent (Agent _agent) {
+        if (_agent.ReturnDistrust() >= _agent.ReturnMaxDistrust()) {
+            agentList.Remove(_agent);
+            Destroy(_agent.gameObject);
         }
+    }
+
+    public void AddNewAgent (Agent _agent) {
+        agentList.Add(_agent);
+        //create gameobject with this._agent script on it
     }
 }

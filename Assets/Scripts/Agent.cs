@@ -11,7 +11,6 @@ public class Agent : MonoBehaviour {
     [Range(0.0f, 100.0f)]
     public float workingSpeed;
     public AnimalType animalType;
-    public List<string> eventTypeList = new() { "Search", "Extract", "Explore", "Storyline" };
     public bool isBusy;
     public Image animalImage; //or Sprite dataType?
     public AgentHandler agentHandler;
@@ -24,7 +23,22 @@ public class Agent : MonoBehaviour {
         agentHandler.SetActiveAgent(this.gameObject.GetComponent<Agent>());
     }
 
-    public List<string> ReturnEventTypeList() {
+    public bool ReturnIfBusy() {
+        if (isBusy) {
+            return true;
+        }
+        return false;
+    }
+
+    public float ReturnDistrust() {
+        return distrust;
+    }
+
+    public int ReturnMaxDistrust() {
+        return maxDistrust;
+    } 
+
+    public List<string> ReturnEventTypeList() {  //how to do this better?
         if (animalType == AnimalType.Cat) {
             return (new() { "Search", "Extract", "Storyline" });
         }

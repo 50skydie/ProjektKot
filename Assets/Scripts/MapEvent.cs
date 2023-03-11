@@ -18,6 +18,7 @@ public class MapEvent : MonoBehaviour {
     }
 
     public void RequestEventStart() {  //on button click
+        Debug.Log("RequestEventStart and call CheckEventStartParameters with "+ this.gameObject.GetComponent<MapEvent>());
         eventHandler.CheckEventStartParameters(this.gameObject.GetComponent<MapEvent>());
     }
 

@@ -6,7 +6,7 @@ public class EventHandler : MonoBehaviour {
     public AgentHandler agentHandler;
 
     public bool CheckEventStartParameters(MapEvent _mapEvent) {
-        if (!agentHandler.ReturnActiveAgent().isBusy) {
+        if (!agentHandler.ReturnActiveAgent().ReturnIfBusy()) {
             if (agentHandler.ReturnActiveAgent().ReturnEventTypeList().Contains(_mapEvent.returnEventType())) {
                 Debug.Log("event type and agent type are correct");
                 return true;
