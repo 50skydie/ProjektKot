@@ -7,13 +7,13 @@ public enum EventType { Search, Extract, Explore, Storyline };
 
 public class MapEvent : MonoBehaviour {
     public string eventName = "None";
+    public string eventDescription = "None";
     public EventHandler eventHandler;
     public EventType eventType;
     public int eventInitialTimer;
-    public Image eventImage;
+    public Texture eventTexture;
     //public Reward reward - Script that tells other managers what is the reward that depends on reward type?
-    private void Awake()
-    {
+    private void Awake() {
         eventHandler = this.gameObject.GetComponentInParent<EventHandler>();
     }
 
@@ -22,7 +22,27 @@ public class MapEvent : MonoBehaviour {
         eventHandler.CheckEventStartParameters(this.gameObject.GetComponent<MapEvent>());
     }
 
-    public string returnEventType() {
+    public void RequestEventShow() {
+        eventHandler.ShowEventInformation(this.gameObject.GetComponent<MapEvent>());
+    }
+
+    public string ReturnEventType() {
         return eventType.ToString();
+    }
+
+    public string ReturnEventName() {
+        return eventName;
+    }
+    public string ReturnEventDescription()
+    {
+        return eventDescription;
+    }
+
+    public int RetrunEventInitialTimer() {
+        return eventInitialTimer;
+    }
+
+    public Texture ReturnEventTexture() {
+        return eventTexture;
     }
 }

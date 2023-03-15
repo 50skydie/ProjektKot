@@ -24,6 +24,10 @@ public class Agent : MonoBehaviour {
         agentHandler.SetActiveAgent(this.gameObject.GetComponent<Agent>());
     }
 
+    public void SetUpAgentParameters() {
+        //set up the Agent
+    }
+
     public bool ReturnIfBusy() {
         if (isBusy) {
             return true;
