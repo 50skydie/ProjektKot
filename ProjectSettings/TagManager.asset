@@ -3,12 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Char1
+  - Char2
+  - Char3
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - RecruitButton
   - Water
   - UI
   - 

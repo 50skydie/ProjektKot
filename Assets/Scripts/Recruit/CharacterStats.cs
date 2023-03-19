@@ -22,13 +22,14 @@ public class CharacterStats : MonoBehaviour
     {
         RecruitCharacters();
         Debug.Log(RecruitList[0]);
-        Debug.Log(RecruitList[1].name);
+        Debug.Log(RecruitList[1]);
         Debug.Log(RecruitList[2]);
     }
     
-    public List<Character> RecruitList = new List<Character>();
+    public List<Character> RecruitList = new();
     public string[] nameList;
 
+    //Creates new character with random stats
     public void RecruitCharacters()
     {
         for (int i = 1; i <= 3; i++)
@@ -40,7 +41,7 @@ public class CharacterStats : MonoBehaviour
             var NewCharacter = new Character(x, y);
             Debug.Log(NewCharacter.name);
             
-            //create new class with random stats
+            
             RecruitList.Add(NewCharacter);
         }
     }
