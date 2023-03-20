@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 172432146}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 220811631}
+        m_TargetAssemblyTypeName: RecruitOnClick, Assembly-CSharp
+        m_MethodName: OnClickRecruitCh2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &172432146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,6 +374,7 @@ GameObject:
   - component: {fileID: 220811629}
   - component: {fileID: 220811628}
   - component: {fileID: 220811630}
+  - component: {fileID: 220811631}
   m_Layer: 5
   m_Name: RecruitCharacterSystem
   m_TagString: Untagged
@@ -415,6 +428,21 @@ MonoBehaviour:
   CS: {fileID: 0}
   StatText: {fileID: 1639680896}
   StatWindow: {fileID: 1169193591}
+--- !u!114 &220811631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220811627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d846fdcbe233e47bca0dd59e8d7710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RecruitWindow: {fileID: 1027507514}
+  AH: {fileID: 0}
+  CH: {fileID: 0}
 --- !u!1 &408103404
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +526,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 408103407}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 220811631}
+        m_TargetAssemblyTypeName: RecruitOnClick, Assembly-CSharp
+        m_MethodName: OnClickRecruitCh1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &408103407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -812,7 +852,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 535481537}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 220811631}
+        m_TargetAssemblyTypeName: RecruitOnClick, Assembly-CSharp
+        m_MethodName: OnClickRecruitCh3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &535481537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -974,7 +1026,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1027507515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1034,8 +1086,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50.570038, y: -150.86395}
-  m_SizeDelta: {x: -101.13611, y: 301.7279}
+  m_AnchoredPosition: {x: 49.602173, y: -150.86395}
+  m_SizeDelta: {x: -99.2003, y: 301.7279}
   m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!1 &1030340965
 GameObject:
@@ -1193,6 +1245,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1169193591}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 220811628}
+        m_TargetAssemblyTypeName: CharacterStats, Assembly-CSharp
+        m_MethodName: RecruitCharacters
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

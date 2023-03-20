@@ -18,13 +18,6 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
-    public void Start()
-    {
-        RecruitCharacters();
-        Debug.Log(RecruitList[0]);
-        Debug.Log(RecruitList[1]);
-        Debug.Log(RecruitList[2]);
-    }
     
     public List<Character> RecruitList = new();
     public string[] nameList;
@@ -39,7 +32,6 @@ public class CharacterStats : MonoBehaviour
             int y = Random.Range(1, 10);
 
             var NewCharacter = new Character(x, y);
-            Debug.Log(NewCharacter.name);
             
             
             RecruitList.Add(NewCharacter);
